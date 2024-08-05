@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 test-results
 playwright-report
+
+assets/*.wasm
+assets/*.data

@@ -32,7 +32,7 @@ export type Progress = {
   loaded: number;
 }
 
-export type InferenceConfg = {
+export type InferenceConfig = {
   text: string,
   voiceId: VoiceId
 };
