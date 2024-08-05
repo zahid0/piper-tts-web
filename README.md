@@ -1,22 +1,34 @@
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/diffusion-studio/ffmpeg-js/graphs/commit-activity)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://diffusion.studio)
-[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/n3mpzfejAb)
-[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/diffusion-studio/ffmpeg-js/blob/main/LICENSE)
-[![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
+> This is a fork of [@diffusion-studio/vits-web](https://github.com/diffusion-studio/vits-web) for use
+> of PiperTTS modules inside of a browser/Electron for AnythingLLM.
+> A big shout-out goes to [Rhasspy Piper](https://github.com/rhasspy/piper), who open-sourced all the currently available models > (MIT License) and to [@jozefchutka](https://github.com/jozefchutka) who came up with the wasm build steps.
 
-# Run VITS based text-to-speech in the browser powered by the [ONNX Runtime](https://onnxruntime.ai/)
+# Run PiperTTS based text-to-speech in the browser powered by the [ONNX Runtime](https://onnxruntime.ai/)
 
-A big shout-out goes to [Rhasspy Piper](https://github.com/rhasspy/piper), who open-sourced all the currently available models (MIT License) and to [@jozefchutka](https://github.com/jozefchutka) who came up with the wasm build steps.
+## Difference from the original
+
+### Caching for client
+
+You can leverage `TTSSessions` for a faster inference. (see index.js for implementation)
+Credit to [this PR](https://github.com/diffusion-studio/vits-web/pull/5) for the starting point.
+
+### Local WASM/Loading
+
+You can define local WASM paths for the `ort` wasm as well as the phenomizer wasm and data file for faster local loading
+since the client could be offline.
+
+### Note:
+
+This is a frontend library and will not work with NodeJS.
 
 ## Usage
 First of all, you need to install the library:
 ```bash
-npm i @diffusionstudio/vits-web
+yarn add @mintplex-labs/piper-tts-web
 ```
 
 Then you're able to import the library like this (ES only)
 ```typescript
-import * as tts from '@diffusionstudio/vits-web';
+import * as tts from '@mintplex-labs/piper-tts-web';
 ```
 
 Now you can start synthesizing speech!
@@ -32,6 +44,7 @@ audio.play();
 
 // as seen in /example with Web Worker
 ```
+
 
 With the initial run of the predict function you will download the model which will then be stored in your [Origin private file system](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system). You can also do this manually in advance *(recommended)*, as follows:
 ```typescript

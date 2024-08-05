@@ -1,8 +1,8 @@
 {
-  "name": "@diffusionstudio/vits-web",
+  "name": "@mintplex-labs/piper-tts-web",
   "private": false,
-  "version": "1.0.2",
-  "description": "Web api for using VITS based models in the browser!",
+  "version": "1.0.0",
+  "description": "Fork of @diffusion-studio/vits-web for easier built-in PiperTTS use.",
   "type": "module",
   "files": [
     "dist",
@@ -10,7 +10,7 @@
   ],
   "module": "./dist/vits-web.js",
   "types": "./dist/index.d.ts",
-  "author": "mail@konstantinpaulus.de",
+  "author": "team@mintplexlabs.com",
   "exports": {
     ".": {
       "import": "./dist/vits-web.js",
@@ -22,12 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:diffusion-studio/vits-web.git"
+    "url": "git@github.com:Mintplex-Labs/piper-tts-web.git"
   },
-  "bugs": {
-    "url": "https://github.com/diffusion-studio/vits-web/issues"
-  },
-  "homepage": "https://github.com/diffusion-studio/vits-web#readme",
+  "homepage": "https://github.com/Mintplex-Labs/piper-tts-web#readme",
   "license": "MIT",
   "keywords": [
     "vits",
@@ -39,7 +36,9 @@
     "text-to-speech",
     "speech synthesis",
     "web ai",
-    "webnn"
+    "webnn",
+    "piperTTS",
+    "AnythingLLM"
   ],
   "scripts": {
     "dev": "vite",
