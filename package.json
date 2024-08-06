@@ -1,7 +1,7 @@
 {
   "name": "@mintplex-labs/piper-tts-web",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fork of @diffusion-studio/vits-web for easier built-in PiperTTS use.",
   "type": "module",
   "files": [
