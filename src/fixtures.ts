@@ -137,5 +137,11 @@ export const PATH_MAP: Record<VoiceId, string> = {
   'vi_VN-vais1000-medium': 'vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx',
   'vi_VN-vivos-x_low': 'vi/vi_VN/vivos/x_low/vi_VN-vivos-x_low.onnx',
   'zh_CN-huayan-medium': 'zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx',
-  'zh_CN-huayan-x_low': 'zh/zh_CN/huayan/x_low/zh_CN-huayan-x_low.onnx'
+  'zh_CN-huayan-x_low': 'zh/zh_CN/huayan/x_low/zh_CN-huayan-x_low.onnx',
+  // Added by Mintplex Labs - missing or new.
+  'cy_GB-gwryw_gogleddol-medium': 'cy/cy_GB/gwryw_gogleddol/medium/cy_GB-gwryw_gogleddol-medium.onnx',
+  'en_US-bryce-medium': 'en/en_US/bryce/medium/en_US-bryce-medium.onnx',
+  'en_US-john-medium': 'en/en_US/john/medium/en_US-john-medium.onnx',
+  'en_US-norman-medium': 'en/en_US/norman/medium/en_US-norman-medium.onnx',
+  'it_IT-paola-medium': 'it/it_IT/paola/medium/it_IT-paola-medium.onnx'
 }
