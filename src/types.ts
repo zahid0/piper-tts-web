@@ -4,17 +4,17 @@ export type FileKey = `${string}/${VoiceId}.onnx` | `${string}/${VoiceId}.onnx.j
 export type Quality = 'low' | 'medium' | 'x_low' | 'high';
 
 export type Voice = {
-  key: VoiceId;
+  key: VoiceId | string;
   name: string;
   language: {
-    code: CountryCode;
+    code: CountryCode | string;
     family: string;
     region: string;
     name_native: string;
     name_english: string;
     country_english: string;
   };
-  quality: Quality;
+  quality: Quality | string;
   num_speakers: number;
   speaker_id_map: Record<string, number>;
   files: {
