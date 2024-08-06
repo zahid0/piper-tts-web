@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   publicDir: process.env.NODE_ENV !== 'production' ? './assets' : '',
   build: {
+    minify: false,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'vits-web',
