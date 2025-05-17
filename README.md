@@ -23,12 +23,12 @@ This is a frontend library and will not work with NodeJS.
 ## Usage
 First of all, you need to install the library:
 ```bash
-yarn add @mintplex-labs/piper-tts-web
+yarn add @zahid0/piper-tts-web
 ```
 
 Then you're able to import the library like this (ES only)
 ```typescript
-import * as tts from '@mintplex-labs/piper-tts-web';
+import * as tts from '@zahid0/piper-tts-web';
 ```
 
 Now you can start synthesizing speech!

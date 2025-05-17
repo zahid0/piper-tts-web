@@ -1,5 +1,5 @@
 {
-  "name": "@mintplex-labs/piper-tts-web",
+  "name": "@zahid0/piper-tts-web",
   "private": false,
   "version": "1.0.3",
   "description": "Fork of @diffusion-studio/vits-web for easier built-in PiperTTS use.",
@@ -22,9 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Mintplex-Labs/piper-tts-web.git"
+    "url": "git@github.com:zahid0/piper-tts-web.git"
   },
-  "homepage": "https://github.com/Mintplex-Labs/piper-tts-web#readme",
+  "homepage": "https://github.com/zahid0/piper-tts-web#readme",
   "license": "MIT",
   "keywords": [
     "vits",

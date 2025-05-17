@@ -31,7 +31,6 @@ const DEFAULT_WASM_PATHS = {
 
 export class TtsSession {
   static WASM_LOCATIONS = DEFAULT_WASM_PATHS;
-  static _instance: TtsSession | null = null;
   ready = false;
   voiceId: VoiceId = 'en_US-hfc_female-medium';
   waitReady: Promise<void> | boolean = false;
@@ -55,12 +54,6 @@ export class TtsSession {
     logger,
     wasmPaths,
   }: TtsSessionOptions) {
-    if (TtsSession._instance) {
-      logger?.("Reusing session for TTS!");
-      TtsSession._instance.voiceId = voiceId ?? TtsSession._instance.voiceId;
-      TtsSession._instance.#progressCallback = progress ?? TtsSession._instance.#progressCallback;
-      return TtsSession._instance;
-    }
 
     logger?.("New session");
     this.#logger = logger;
@@ -70,7 +63,6 @@ export class TtsSession {
     this.#wasmPaths = wasmPaths ?? DEFAULT_WASM_PATHS;
     this.#logger?.(`Loaded WASMPaths at: ${JSON.stringify(this.#wasmPaths)}`);
 
-    TtsSession._instance = this;
     return this;
   }
 
